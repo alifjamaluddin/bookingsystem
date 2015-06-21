@@ -29,20 +29,19 @@ if (isset($_POST['submit'])) {
   $nomatrik=$_POST['nomatrik']; 
   $noic=$_POST['noic']; 
   $fullname=$_POST['fullname']; 
-  // $notel=$_POST['notel']; 
   $email=$_POST['email']; 
   $confirmation = generateRandomString(20);
 
 
-$InsertRS__query="INSERT INTO `user` (`username`, `password`, `fullname`, `email`, `noic`, `nomatrik`, `notel`, `confirmation`, `status`, `role`) 
-VALUES ('$username', '$password', '$fullname', '$email', '$noic', '$nomatrik', NULL, '$confirmation', '0', '$role')";
+$InsertRS__query="INSERT INTO `user` (`username`, `password`, `fullname`, `email`, `noic`, `nomatrik`, `confirmation`, `status`, `role`) 
+VALUES ('$username', MD5('$password'), '$fullname', '$email', '$noic', '$nomatrik', '$confirmation', '0', '$role')";
 
 $InsertRS = $connection->query($InsertRS__query);
   if ($InsertRS) {
   	echo $SUCCESS;
     }
   else {
-  	ECHO $FAILED;
+  	echo $FAILED;
   }
 }
 
