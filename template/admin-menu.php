@@ -17,7 +17,7 @@
 							<a href="admin-registration.php">Registration</a>
 						</li>
 						<li>
-							<a href="admin-statistic.php">Statistic</a>
+							<a href="admin-report.php">Statistic</a>
 						</li>
 					</ul>
 

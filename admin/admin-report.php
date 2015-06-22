@@ -61,9 +61,56 @@
 			<?php include "../template/admin-profile.php"; ?>
 
 			<div class="content">
+	<div class="content-heading">
+					<div class="container">
+						<h1 class="heading">Statistic Report</h1>
+					</div>
+				</div>
+				<div class="container-inner searchbox">
+					<div class="container">
+						<div class="tile-wrap">
+							<div class="tile">
+								<form method="get" action="statistic.php" target="ifrm"> 
+								<!-- <div class="pull-left tile-side">
+									<div class="avatar avatar-blue avatar-sm">
+										<span class="icon icon-search"></span>
+									</div>
+								</div> -->
+								<div class="tile-action tile-action-show">
+									<ul class="nav nav-list pull-right">
+										<li>
+											<div class="form-group-btn">
+												<button class="btn btn-blue waves-button waves-light waves-effect" type="submit" name="report">Generate Report</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="tile-inner">
 
-				
+									<select class="form-control" id="input-select" name="month" onchange="" size="1">
+								    <option value="1">January</option>
+								    <option value="2">February</option>
+								    <option value="3">March</option>
+								    <option value="4">April</option>
+								    <option value="5">May</option>
+								    <option value="6">June</option>
+								    <option value="7">July</option>
+								    <option value="8">August</option>
+								    <option value="9">September</option>
+								    <option value="10">October</option>
+								    <option value="11">November</option>
+								    <option value="12">December</option>
+								</select>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
 			</div>
+			</div>
+
+			
 			
 			<!-- FOOTER -->
 			<?php include "template/footer.php"; ?>
