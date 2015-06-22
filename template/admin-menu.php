@@ -11,10 +11,13 @@
 							<a href="admin-reservation.php">Reservation</a>
 						</li>
 						<li>
+							<a href="admin-checkin.php">Check In</a>
+						</li>
+						<li>
 							<a href="admin-registration.php">Registration</a>
 						</li>
 						<li>
-							<a href="admin-report.php">Report</a>
+							<a href="admin-statistic.php">Statistic</a>
 						</li>
 					</ul>
 
