@@ -1,3 +1,19 @@
+<?php
+require( "../php/config.php" );
+
+// *** Validate request to login to this site.
+// if (!isset($_SESSION)) {
+//   session_start();
+// }
+
+
+$connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+// Check connection
+if (mysqli_connect_errno())
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,14 +53,14 @@
 			</div>
 			<header class="header">
 
-			<ul class="nav nav-list pull-left">
-			<li>
-				<a data-toggle="menu" href="#menu">
-					<span class="access-hide">Menu</span>
-					<span class="icon icon-menu icon-lg"></span>
-				</a>
-			</li>
-		</ul>
+				<ul class="nav nav-list pull-left">
+					<li>
+						<a data-toggle="menu" href="#menu">
+							<span class="access-hide">Menu</span>
+							<span class="icon icon-menu icon-lg"></span>
+						</a>
+					</li>
+				</ul>
 				<a class="header-logo" href="index.php">Booking System</a>
 				
 				<ul class="nav nav-list pull-right">
@@ -60,7 +76,45 @@
 			<?php include "../template/user-profile.php"; ?>
 
 			<div class="content">
+				<div class="content-heading">
+					<div class="container">
+						<h1 class="heading">Reservation Status</h1>
+					</div>
+				</div>
+				<div class="content-inner">
+					<div class="container">
+						<div class="card-wrap">
+							<div class="row">
 
+								<?php 
+								$View__query="SELECT * FROM `reservation` WHERE userid = 1 ORDER BY datecreated DESC LIMIT 5";
+								$ViewRS = $connection->query($View__query);
+								while($row = mysqli_fetch_assoc($ViewRS)){
+									echo '
+									<div class="col-lg-3 col-md-4 col-sm-6">
+										<div class="card card-alt">
+											<div class="card-main">
+												<div class="card-inner">
+												<p class="card-heading text-alt">'.$row['eventname'].'</p>
+													<p>
+														<small>From :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
+														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
+														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>
+													</p>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									';
+								}
+
+								?>
+
+							</div>
+						</div>
+					</div>
+				</div>
 				
 			</div>
 			
