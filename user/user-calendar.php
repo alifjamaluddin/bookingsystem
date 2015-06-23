@@ -75,7 +75,7 @@
 					<div class="container">
 						<div class="tile-wrap">
 							<div class="tile">
-								<form method="get" action="admin-calendar.php"> 
+								<form method="get" action="user-calendar.php"> 
 								<!-- <div class="pull-left tile-side">
 									<div class="avatar avatar-blue avatar-sm">
 										<span class="icon icon-search"></span>
@@ -94,13 +94,21 @@
 
 									<select class="form-control" id="input-select" name="venue" onchange="" size="1">
 								    <option value="f01">Bilik Persatuan 1</option>
-								    <option value="f02">Bilik Persatuan 2</option>
-								    <option value="f03">Bilik Persatuan 3</option>
-								    <option value="f04">Bilik Persatuan 4</option>
-								    <option value="f05">Bilik Persatuan 5</option>
-								    <option value="f06">Bilik Persatuan 6</option>
-								     <option value="f07">Bilik Seminar 1</option>
-								    <option value="f08">Bilik Seminar 2</option>
+								   <option value="f02">Bilik Persatuan 2</option>
+								   <option value="f03">Bilik Persatuan 3</option>
+								   <option value="f04">Bilik Persatuan 4</option>
+								   <option value="f05">Bilik Persatuan 5</option>
+								   <option value="f06">Bilik Persatuan 6</option>
+								   <option value="f07">Bilik Seminar 1</option>
+								   <option value="f08">Bilik Seminar 2</option>
+								   <option value="f09">Pingpong table court</option>
+								   <option value="f10">Futsal court</option>
+								   <option value="f11">Basketball court</option>
+								   <option value="f12">Volleyball court</option>
+								   <option value="f13">Takraw court</option>
+								   <option value="f14">Tennis court</option>
+								   <option value="f15">Netball court</option>
+								   <option value="f16">Football field</option>	
 								    
 								</select>
 								</div>
