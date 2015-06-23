@@ -13,12 +13,12 @@
 					</div>
 				</div>
 				<div class="menu-content">
-							<form class="form" action="index.html">
+							<form class="form" action="php/user-login.php" method="post">
 											<div class="form-group form-group-label">
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
 														<label class="floating-label" for="login-username">Username</label>
-														<input class="form-control" id="login-username" type="text">
+														<input class="form-control" id="login-username" type="text" name="username">
 													</div>
 												</div>
 											</div>
@@ -26,14 +26,14 @@
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
 														<label class="floating-label" for="login-password">Password</label>
-														<input class="form-control" id="login-password" type="password">
+														<input class="form-control" id="login-password" type="password" name="password">
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
-														<button class="btn btn-block btn-blue waves-button waves-effect waves-light">Sign In</button>
+														<button class="btn btn-block btn-blue waves-button waves-effect waves-light" name="submit">Sign In</button>
 													</div>
 												</div>
 											</div>

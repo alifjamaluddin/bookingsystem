@@ -70,7 +70,7 @@
 					<div class="container">
 						<div class="tile-wrap">
 							<div class="tile">
-								<form method="get" action="statistic.php" target="ifrm"> 
+								<form method="get" action="statistic.php"> 
 								<!-- <div class="pull-left tile-side">
 									<div class="avatar avatar-blue avatar-sm">
 										<span class="icon icon-search"></span>

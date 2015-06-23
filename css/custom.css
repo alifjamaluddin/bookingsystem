@@ -18,3 +18,8 @@
 .searchbox{
 	margin-top: 25px;
 }
+
+#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
