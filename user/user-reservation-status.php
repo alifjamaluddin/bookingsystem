@@ -100,6 +100,7 @@ if (mysqli_connect_errno())
 														<small>From :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
 														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>
+														<a href="./slip.php?id='.$row['id'].'" class="btn btn-green">Print Slip</a>
 													</p>
 												</div>
 

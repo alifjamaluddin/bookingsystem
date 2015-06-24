@@ -6,6 +6,9 @@
      <script type="text/javascript" src="../js/canvasjs.min.js"></script>
 
     <script type="text/javascript">
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
     var month = getUrlVars()["month"];
     var url = "generateData.php?month="+month;
         $(document).ready(function () {
@@ -14,7 +17,7 @@
 
                 var chart = new CanvasJS.Chart("chartContainer", {
                     title:{
-        text: "Venue Reservation for January, 2015"    
+        text: "Venue Reservation for "+monthNames[month]+", 2015"    
       },
       animationEnabled: true,
       axisY: {
@@ -55,8 +58,9 @@
    
 </head>
 <body>
+    <button onclick="window.print()">Print this report</button>
+
 
     <div id="chartContainer" style="width: 800px; height: 380px;"></div>
-    <button onclick="window.print()">Print this report</button>
 </body>
 </html>
