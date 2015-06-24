@@ -74,7 +74,7 @@
 			<div class="content">
 				<div class="content-heading">
 					<div class="container">
-						<h1 class="heading">Statistic Report</h1>
+						<h1 class="heading">Calendar</h1>
 					</div>
 				</div>
 				<div class="container-inner searchbox">
