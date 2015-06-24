@@ -1,6 +1,3 @@
-<?php
-include "../php/check_access_admin.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
