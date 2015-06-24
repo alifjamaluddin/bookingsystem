@@ -101,7 +101,7 @@ if (mysqli_connect_errno())
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
 														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>';
 														if($row['status']=="Diluluskan"){
-															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green">Print Slip</a>';															
+															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green" target="_blank">Print Slip</a>';															
 														}
 
 														echo '
