@@ -42,8 +42,8 @@ if (isset($_POST['submit'])) {
 
   if ($loginFoundUser > 0) {
     $row = mysqli_fetch_assoc($LoginRS);
-        // $userID = $row['id'];
-        // $_SESSION['USER_ID'] = $userID; 
+         $_SESSION['userid'] = $userid; 
+        $_SESSION['role'] = "admin"; 
     
     echo $SUCCESS;
   }

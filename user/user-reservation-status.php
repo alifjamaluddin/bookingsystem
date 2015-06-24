@@ -1,10 +1,11 @@
 <?php
 require( "../php/config.php" );
+include "../php/check_access_user.php";
 
 // *** Validate request to login to this site.
-// if (!isset($_SESSION)) {
-//   session_start();
-// }
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 
 $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
@@ -13,6 +14,7 @@ if (mysqli_connect_errno())
 {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +89,8 @@ if (mysqli_connect_errno())
 							<div class="row">
 
 								<?php 
-								$View__query="SELECT * FROM `reservation` WHERE userid = 1 ORDER BY datecreated DESC LIMIT 5";
+								$userid = $_SESSION['userid'];
+								$View__query="SELECT * FROM `reservation` WHERE userid = $userid ORDER BY datecreated DESC LIMIT 5";
 								$ViewRS = $connection->query($View__query);
 								while($row = mysqli_fetch_assoc($ViewRS)){
 									echo '

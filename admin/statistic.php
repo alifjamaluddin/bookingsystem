@@ -1,3 +1,7 @@
+<?php
+include "../php/check_access_admin.php";
+
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>

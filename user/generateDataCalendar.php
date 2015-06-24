@@ -2,11 +2,11 @@
 
 header('Content-Type: application/json');
 require( "../php/config.php" );
-
+include "../php/check_access_user.php";
 // *** Validate request to login to this site.
-// if (!isset($_SESSION)) {
-//   session_start();
-// }
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 
 $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);

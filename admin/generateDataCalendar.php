@@ -2,6 +2,7 @@
 
 header('Content-Type: application/json');
 require( "../php/config.php" );
+include "../php/check_access_admin.php";
 
 // *** Validate request to login to this site.
 // if (!isset($_SESSION)) {

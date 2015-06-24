@@ -9,5 +9,4 @@ session_destroy();
  alert('You have been logged out');
  window.location='../';
  </script>";
-// header("Location: "."./");
 ?>

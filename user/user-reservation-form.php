@@ -1,10 +1,10 @@
 <?php
 require( "../php/config.php" );
-
+include "../php/check_access_user.php";
 // *** Validate request to login to this site.
-// if (!isset($_SESSION)) {
-//   session_start();
-// }
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 
 $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
@@ -123,17 +123,6 @@ if (mysqli_connect_errno())
 									</div>
 								</div>
 
-								<div class="form-group">
-									<div class="row">
-								<!-- <div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Matric number</label>
-								</div> -->
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="hidden" name="userid" value="1">
-								</div>
-							</div>
-						</div>
-
 						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
@@ -154,20 +143,6 @@ if (mysqli_connect_errno())
 							</div>
 						</div>
 
-
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Poster(optional)</label>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="file" name="poster" placeholder="Email">
-								</div>
-							</div>
-						</div>
-
-						
-						
 
 					</fieldset>
 

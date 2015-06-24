@@ -27,14 +27,10 @@ if (isset($_POST['submit'])) {
 
   $username=$_POST['username']; 
   $password=$_POST['password']; 
-  // echo $username;
-  // echo $password;
   $loginPassword=md5($password);
-  // echo $loginPassword;
 
 
   $LoginRS__query="SELECT * FROM user WHERE username='$username' AND password='$loginPassword'";
-// echo $LoginRS__query;
 
   $LoginRS = $connection->query($LoginRS__query);
 
@@ -42,8 +38,9 @@ if (isset($_POST['submit'])) {
 
   if ($loginFoundUser > 0) {
     $row = mysqli_fetch_assoc($LoginRS);
-        // $userID = $row['id'];
-        // $_SESSION['USER_ID'] = $userID; 
+        $userid = $row['id'];
+        $_SESSION['userid'] = $userid; 
+        $_SESSION['role'] = "user"; 
     
     echo $SUCCESS;
   }

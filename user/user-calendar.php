@@ -1,3 +1,6 @@
+<?php
+include "../php/check_access_user.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

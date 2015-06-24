@@ -1,6 +1,6 @@
 <?php
 require( "../php/config.php" );
-
+include "../php/check_access_user.php";
 // *** Validate request to login to this site.
 // if (!isset($_SESSION)) {
 //   session_start();

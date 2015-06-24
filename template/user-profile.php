@@ -18,10 +18,7 @@
 							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Photo</a>
-						</li>
-						<li>
-							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
+							<a href="../php/logout.php"><span class="icon icon-exit-to-app"></span>Logout</a>
 						</li>
 					</ul>
 				</div>

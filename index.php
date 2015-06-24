@@ -1,10 +1,14 @@
+<?php
+include "php/check_access_front.php";
+echo "TEST";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Material</title>
+	<title>Reservation System</title>
 
 	<!-- css -->
 	<link href="css/base.min.css" rel="stylesheet">

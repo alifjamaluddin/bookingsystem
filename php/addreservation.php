@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
   $datetimefrom=$_POST['datetimefrom']; 
   $datetimeto=$_POST['datetimeto']; 
   $facid=$_POST['facid']; 
-  $userid=$_POST['userid']; 
+  $userid=$_SESSION['userid'];
 
 
 $InsertRS__query="INSERT INTO `reservation` (`eventname`, `datetimefrom`, `datetimeto`, `userid`, `facid`) 
