@@ -55,14 +55,14 @@ if (mysqli_connect_errno())
 			</div>
 			<header class="header">
 
-			<ul class="nav nav-list pull-left">
-			<li>
-				<a data-toggle="menu" href="#menu">
-					<span class="access-hide">Menu</span>
-					<span class="icon icon-menu icon-lg"></span>
-				</a>
-			</li>
-		</ul>
+				<ul class="nav nav-list pull-left">
+					<li>
+						<a data-toggle="menu" href="#menu">
+							<span class="access-hide">Menu</span>
+							<span class="icon icon-menu icon-lg"></span>
+						</a>
+					</li>
+				</ul>
 				<a class="header-logo" href="index.php">Booking System</a>
 				
 				<ul class="nav nav-list pull-right">
@@ -77,54 +77,54 @@ if (mysqli_connect_errno())
 			<?php include "../template/user-menu.php"; ?>
 			<?php include "../template/user-profile.php"; ?>
 
-							<div class="content">
-		<div class="content-heading">
-			<div class="container">
-				<h1 class="heading">Reservation form</h1>
-			</div>
-		</div>
-		<div class="content-inner">
-			<div class="container">
-				<form class="form" method="post" action="../php/addreservation.php" enctype="multipart/form-data">
-					<fieldset>
-						<legend class="col-lg-10 col-lg-offset-2 col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4">Reservation</legend>
-						
+			<div class="content">
+				<div class="content-heading">
+					<div class="container">
+						<h1 class="heading">Reservation form</h1>
+					</div>
+				</div>
+				<div class="content-inner">
+					<div class="container">
+						<form class="form" method="post" action="../php/addreservation.php" enctype="multipart/form-data">
+							<fieldset>
+								<legend class="col-lg-10 col-lg-offset-2 col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4">Reservation</legend>
+								
 
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Event name</label>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-lg-2 col-md-3 col-sm-4">
+											<label class="form-label" for="input-text">Event name</label>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-8">
+											<input class="form-control" id="input-text" type="text" name="eventname" placeholder="Event name">
+										</div>
+									</div>
 								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="eventname" placeholder="Event name">
-								</div>
-							</div>
-						</div>
 
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Datetime from</label>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-lg-2 col-md-3 col-sm-4">
+											<label class="form-label" for="input-text">Datetime from</label>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-8">
+											<input class="form-control" id="input-text" type="datetime-local" name="datetimefrom">
+										</div>
+									</div>
 								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="datetime-local" name="datetimefrom">
-								</div>
-							</div>
-						</div>
 
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Datetime to</label>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-lg-2 col-md-3 col-sm-4">
+											<label class="form-label" for="input-text">Datetime to</label>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-8">
+											<input class="form-control" id="input-text" type="datetime-local" name="datetimeto">
+										</div>
+									</div>
 								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="datetime-local" name="datetimeto">
-								</div>
-							</div>
-						</div>
 
-<div class="form-group">
-							<div class="row">
+								<div class="form-group">
+									<div class="row">
 								<!-- <div class="col-lg-2 col-md-3 col-sm-4">
 									<label class="form-label" for="input-text">Matric number</label>
 								</div> -->
@@ -134,7 +134,7 @@ if (mysqli_connect_errno())
 							</div>
 						</div>
 
-<div class="form-group">
+						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
 									<label class="form-label" for="input-text">Facilities</label>
@@ -143,13 +143,13 @@ if (mysqli_connect_errno())
 									<select class="form-control form-control-default" id="input-select" name="facid">
 
 										<?php 
-						$View__query="SELECT * FROM `place`";
-						$ViewRS = $connection->query($View__query);
-						while($row = mysqli_fetch_assoc($ViewRS)){
-							echo '<option value="'.$row['facid'].'">'.$row['name'].'</option>';
-						}
-					?>
-								</select>
+										$View__query="SELECT * FROM `place`";
+										$ViewRS = $connection->query($View__query);
+										while($row = mysqli_fetch_assoc($ViewRS)){
+											echo '<option value="'.$row['facid'].'">'.$row['name'].'</option>';
+										}
+										?>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -184,11 +184,11 @@ if (mysqli_connect_errno())
 			</div>
 		</div>
 	</div>
-			
-			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+	
+	<!-- FOOTER -->
+	<?php include "template/footer.php"; ?>
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-			<script src="../js/base.min.js" type="text/javascript"></script>
-		</body>
-		</html>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../js/base.min.js" type="text/javascript"></script>
+</body>
+</html>
