@@ -95,12 +95,16 @@ if (mysqli_connect_errno())
 										<div class="card card-alt">
 											<div class="card-main">
 												<div class="card-inner">
-												<p class="card-heading text-alt">'.$row['eventname'].'</p>
+													<p class="card-heading text-alt">'.$row['eventname'].'</p>
 													<p>
 														<small>From :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
-														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>
-														<a href="./slip.php?id='.$row['id'].'" class="btn btn-green">Print Slip</a>
+														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>';
+														if($row['status']=="Diluluskan"){
+															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green">Print Slip</a>';															
+														}
+
+														echo '
 													</p>
 												</div>
 
