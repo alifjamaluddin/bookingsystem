@@ -1,5 +1,5 @@
 <div class="tile-wrap">
-	<div class="tile tile-red">
+	<div class="tile tile-green">
 		<div class="tile-inner">
 			<div class="text-overflow">SPORT UNIT</div>
 		</div>
@@ -27,7 +27,7 @@
 
 </div>
 <div class="tile-wrap">
-	<div class="tile tile-red">
+	<div class="tile tile-green">
 		<div class="tile-inner">
 			<div class="text-overflow">CO-CURRICULUM</div>
 		</div>

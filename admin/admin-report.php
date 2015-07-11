@@ -1,5 +1,7 @@
 <?php
+require( "../php/config.php" );
 include "../php/check_access_admin.php";
+
 
 ?>
 <!DOCTYPE html>

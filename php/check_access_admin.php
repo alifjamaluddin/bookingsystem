@@ -8,7 +8,7 @@ if(!isset($_SESSION['userid'])&&!isset($_SESSION['role'])){
   echo "
     <script>
     alert('Please login');
-    window.location = '../';
+    window.location = '../admin/admin-login.php';
     </script>
   ";
 }else{

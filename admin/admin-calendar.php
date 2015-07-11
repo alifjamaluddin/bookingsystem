@@ -1,4 +1,5 @@
 <?php
+require( "../php/config.php" );
 include "../php/check_access_admin.php";
 ?>
 <!DOCTYPE html>
@@ -133,7 +134,7 @@ include "../php/check_access_admin.php";
 			</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
 			<!-- // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 			<script src="../js/base.min.js" type="text/javascript"></script>

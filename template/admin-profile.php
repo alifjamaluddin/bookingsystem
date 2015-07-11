@@ -1,3 +1,38 @@
+<?php 
+
+
+// *** Validate request to login to this site.
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+
+$connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+// Check connection
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$userid = $_SESSION['userid'];
+$profileRS__query="SELECT * FROM admin WHERE id = $userid";
+  $ProfileRS = $connection->query($profileRS__query);
+
+
+  $loginFoundUser = $ProfileRS->num_rows;
+
+  if ($loginFoundUser > 0) {
+    $row = mysqli_fetch_assoc($ProfileRS);
+        $displayname = ucwords($row['name']);
+         $email = $row['email'];
+  }
+  else {
+   		$displayname = "Display name";
+   		$email = "user@email.com";
+  }
+
+
+?>
 	<nav class="menu menu-right" id="profile">
 		<div class="menu-scroll">
 			<div class="menu-wrap">
@@ -6,10 +41,10 @@
 						<img alt="John Smith" src="../images/samples/landscape.jpg">
 					</div>
 					<div class="menu-top-info">
-						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>John Smith</a>
+						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span><?php echo $displayname; ?></a>
 					</div>
 					<div class="menu-top-info-sub">
-						<small>Some additional information about John Smith</small>
+						<small><?php echo $email; ?></small>
 					</div>
 				</div>
 				<div class="menu-content">

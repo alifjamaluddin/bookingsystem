@@ -6,11 +6,6 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
-// if(isset($_SESSION['USER_ID']) && !empty($_SESSION['USER_ID'])) {
-// 	header("Location: " . $REDIRECT_ADMIN );
-// }
-
-
 $SUCCESS = "<script>window.location='../admin/index.php'</script>";
 $FAILED = "<script>alert('Wrong username or password');window.history.back();</script>";
 
@@ -42,6 +37,7 @@ if (isset($_POST['submit'])) {
 
   if ($loginFoundUser > 0) {
     $row = mysqli_fetch_assoc($LoginRS);
+    $userid = $row['id'];
          $_SESSION['userid'] = $userid; 
         $_SESSION['role'] = "admin"; 
     
