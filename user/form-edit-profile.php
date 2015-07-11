@@ -1,11 +1,11 @@
 <?php
 require( "../php/config.php" );
-include "../php/check_access_admin.php";
+// include "../php/check_access_admin.php";
 
 // *** Validate request to login to this site.
-// if (!isset($_SESSION)) {
-//   session_start();
-// }
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 
 $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
@@ -16,10 +16,6 @@ if (mysqli_connect_errno())
   }
 
 
-$id = $_GET['id'];
-$Edit__query="SELECT * FROM `user` where id = $id";
-$EditRS = $connection->query($Edit__query);
-$row = mysqli_fetch_assoc($EditRS)
 
 ?>
 
@@ -85,6 +81,14 @@ $row = mysqli_fetch_assoc($EditRS)
 			<?php include "../template/admin-menu.php"; ?>
 			<?php include "../template/admin-profile.php"; ?>
 
+<?php
+$userid = $_SESSION['userid'];
+
+$Edit__query="SELECT * FROM `user` where id = $userid";
+echo $Edit__query;
+$EditRS = $connection->query($Edit__query);
+$row = mysqli_fetch_assoc($EditRS);
+?>
 				<div class="content">
 		<div class="content-heading">
 			<div class="container">
@@ -102,13 +106,13 @@ $row = mysqli_fetch_assoc($EditRS)
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
 									<label class="form-label" for="input-text">Username</label>
+
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="username" placeholder="Username" value="<?php echo $row['username']; ?>">
+									<input class="form-control" id="input-text" type="text" name="username" placeholder="Username" value="<?php echo $row['username'] ?>">
 								</div>
 							</div>
 						</div>
-
 						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
@@ -126,7 +130,7 @@ $row = mysqli_fetch_assoc($EditRS)
 									<label class="form-label" for="input-text">Full name</label>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="fullname" placeholder="Full name" value="<?php echo $row['fullname']; ?>">
+									<input class="form-control" id="input-text" type="text" name="fullname" placeholder="Full name" value= "<?php echo $row['fullname']; ?>">
 								</div>
 							</div>
 						</div>
@@ -164,32 +168,16 @@ $row = mysqli_fetch_assoc($EditRS)
 							</div>
 						</div>
 
-						<!-- <div class="form-group">
+						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
 									<label class="form-label" for="input-text">Phone number</label>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="notel" placeholder="Phone number">
+									<input class="form-control" id="input-text" type="text" name="notel" placeholder="Phone number" value="<?php echo $row['notel']; ?>">
 								</div>
 							</div>
 						</div>
- -->
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Role</label>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<select class="form-control form-control-default" id="input-select" name="role" value="<?php echo $row['role']; ?>" >
-									<option value="student">Student</option>
-									<option value="instructor">Instructor</option>
-								</select>
-								</div>
-							</div>
-						</div>
-
-						<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 					</fieldset>
 
 
@@ -207,7 +195,7 @@ $row = mysqli_fetch_assoc($EditRS)
 	</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
 			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>

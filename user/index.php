@@ -1,5 +1,6 @@
 <?php
 include "../php/check_access_user.php";
+include "../php/config.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +72,7 @@ include "../php/check_access_user.php";
 			<!-- FOOTER -->
 			<?php include "template/footer.php"; ?>
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>
 		</body>
 		</html>

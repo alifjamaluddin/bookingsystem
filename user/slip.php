@@ -27,36 +27,56 @@ $row = mysqli_fetch_assoc($ViewRS);
 	<title>Reservation Slip</title>
 	<style type="text/css">
 		#header{
-			max-height: 200px;
+			max-height: 150px;
 		}
 
-		.detail{
-			margin-left: 30px;
+		.slip-content{
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.detail-inner{
-			margin-left: 45px;
+			text-align: center;
+			width: 50%;
+			 margin: 0 auto;
+		}
+
+		.printbtn{
+			text-align: center;
+			width: 50%;
+			 margin: 0 auto;
 		}
 	</style>
 	<script type="text/javascript" src="../js/print.js"></script>
 </head>
 <body>
-<div class="container">
-<button onclick="printDiv('printable');">Print slip</button>
-<div class="detail" id="printable">
-<img id="header" src="../images/uitm_logo.jpg">
-<div class="detail-inner">
-	<p>Reference Id : <?php echo $row['id'] ?></p>
-<p>Full name: <?php echo ucwords($row['fullname']) ?></p>
-<p>Student/Staff ID : <?php echo strtoupper($row['nomatrik']) ?></p>
-<p>Facility : <?php echo $row['name'] ?></p>
-<p>Event Name: <?php echo $row['eventname'] ?></p>
-<p>Start: <?php echo date("d/m/Y  h:i A", strtotime($row['datetimefrom']))?></p>
-<p>End: <?php echo date("d/m/Y  h:i A", strtotime($row['datetimeto'])) ?></p>
-</div>
+	<div class="container">
+		<div class="detail" >
+		<div class="slip-content" id="printable">
+			<div class="detail-inner" >
+			<img id="header" src="../images/uitm_logo.jpg">
+				<h1>Reservation Slip</h1>
+				<p>Reference Id : <?php echo $row['id'] ?></p>
+				<p>Full name: <?php echo ucwords($row['fullname']) ?></p>
+				<p>Student/Staff ID : <?php echo strtoupper($row['nomatrik']) ?></p>
+				<p>Facility : <?php echo $row['name'] ?></p>
+				<p>Event Name: <?php echo $row['eventname'] ?></p>
+				<p>Start: <?php echo date("d/m/Y  h:i A", strtotime($row['datetimefrom']))?></p>
+				<p>End: <?php echo date("d/m/Y  h:i A", strtotime($row['datetimeto'])) ?></p>
+			
 
-</div>
-</div>
+			</div>
+		</div>
+		<div class="printbtn">
+				<button onclick="printDiv('printable');">Print slip</button>
+				<button onclick="window.close()">Close</button>
+			</div>
+			
+
+		</div>
+
+	</div>
 
 </body>
 </html>

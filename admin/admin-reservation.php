@@ -127,7 +127,7 @@ if (mysqli_connect_errno())
 			<!-- FOOTER -->
 			<?php include "template/footer.php"; ?>
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>
 		</body>
 		</html>

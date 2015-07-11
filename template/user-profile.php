@@ -1,6 +1,6 @@
 <?php 
 
-require( "../php/config.php" );
+//require( "../php/config.php" );
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {

@@ -13,6 +13,8 @@ $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 if (mysqli_connect_errno())
 {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}else{
+	echo "Success";
 }
 
 ?>
@@ -37,7 +39,7 @@ if (mysqli_connect_errno())
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 			<![endif]-->
 		</head>
-		<body class="avoid-fout">
+		<body ><!-- class="avoid-fout" -->
 			<div class="avoid-fout-indicator avoid-fout-indicator-fixed">
 				<div class="progress-circular progress-circular-alt progress-circular-center">
 					<div class="progress-circular-wrapper">
@@ -90,6 +92,7 @@ if (mysqli_connect_errno())
 
 								<?php 
 								$userid = $_SESSION['userid'];
+
 								$View__query="SELECT * FROM `reservation` WHERE userid = $userid ORDER BY datecreated DESC LIMIT 5";
 								$ViewRS = $connection->query($View__query);
 								while($row = mysqli_fetch_assoc($ViewRS)){
@@ -127,9 +130,9 @@ if (mysqli_connect_errno())
 			</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>
 		</body>
 		</html>
