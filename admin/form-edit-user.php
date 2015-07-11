@@ -30,7 +30,7 @@ $row = mysqli_fetch_assoc($EditRS)
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Booking system</title>
+	<title>Student Activity Center Reservation System</title>
 
 	<!-- css -->
 	<link href="../css/base.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@ $row = mysqli_fetch_assoc($EditRS)
 				</a>
 			</li>
 		</ul>
-				<a class="header-logo" href="index.php">Booking System</a>
+				<a class="header-logo" href="index.php">Student Activity Center Reservation System</a>
 				
 				<ul class="nav nav-list pull-right">
 					<li>

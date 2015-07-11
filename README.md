@@ -1,3 +1,3 @@
 # bookingsystem
 
-Booking system for places reservation.
+Student Activity Center Reservation System for places reservation.

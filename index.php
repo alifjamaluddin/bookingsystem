@@ -40,7 +40,7 @@ echo "TEST";
 				</div>
 			</div>
 			<header class="header">
-				<a class="header-logo" href="index.php">Booking System</a>
+				<a class="header-logo" href="index.php">Student Activity Center Reservation System</a>
 				
 				<ul class="nav nav-list pull-right">
 					<li>

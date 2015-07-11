@@ -1,5 +1,5 @@
 <footer class="footer">
 		<div class="container">
-			<p>Material</p>
+			<p>Copyright©2015 UITM MELAKA</p>
 		</div>
 	</footer>

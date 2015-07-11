@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Booking System</title>
+	<title>Student Activity Center Reservation System</title>
 
 	<!-- css -->
 	<link href="../css/base.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<header class="header">
-		<span class="header-logo">Booking system</span>
+		<span class="header-logo">Student Activity Center Reservation System</span>
 	</header>
 	<div class="content">
 		<div class="content-heading">
