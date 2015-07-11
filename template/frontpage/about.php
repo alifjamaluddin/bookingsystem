@@ -3,7 +3,7 @@
 </div>
 <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
 	<div class="about-img">
-		<img src="images/samples/landscape.jpg">
+		<img src="images/about.jpg">
 	</div>
 	<blockquote>
 		<p>
