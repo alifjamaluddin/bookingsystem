@@ -59,6 +59,7 @@ echo "TEST";
 				
 			</div>
 			
+			
 			<!-- FOOTER -->
 			<?php include "template/footer.php"; ?>
 

@@ -164,7 +164,7 @@ include "../php/check_access_admin.php";
 					<div class="form-group-btn">
 						<div class="row">
 							<div class="col-lg-4 col-lg-push-2 col-md-6 col-md-push-3 col-sm-8 col-sm-push-4">
-								<button class="btn btn-blue waves-button waves-light waves-effect" type="submit" name="submit">Submit</button><a class="btn waves-button waves-effect" href="pengguna.php" >Cancel</a>
+								<button class="btn btn-blue waves-button waves-light waves-effect" type="submit" name="submit">Submit</button><a class="btn waves-button waves-effect" href="admin-registration.php" >Cancel</a>
 							</div>
 						</div>
 					</div>
@@ -174,7 +174,7 @@ include "../php/check_access_admin.php";
 	</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
 			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>

@@ -4,7 +4,7 @@ include "../php/check_access_user.php";
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
-  session_start();
+	session_start();
 }
 
 
@@ -29,7 +29,7 @@ if (mysqli_connect_errno())
 	<!-- css -->
 	<link href="../css/base.min.css" rel="stylesheet">
 	<link href="../css/custom.css" rel="stylesheet">
-<script src="../js/cancelrsv.js" type="text/javascript"></script>
+	<script src="../js/cancelrsv.js" type="text/javascript"></script>
 
 
 	<!-- favicon -->
@@ -108,6 +108,11 @@ if (mysqli_connect_errno())
 														<small>From :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
 														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>';
+														if($row['poster']!=""){
+															echo '<small>Poster: <a href="'.$row['poster'].'">Click here</a></small><br>';
+														}else{
+															echo '<small>Poster: No poster</small><br>';
+														}
 														if($row['status']=="Diluluskan"){
 															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green" target="_blank">Print Slip</a>  ';															
 															echo '<a onclick="cancel('.strtotime($row['datetimefrom']).','.$row['id'].')" class="btn btn-red" target="_blank">Cancel</a>';															

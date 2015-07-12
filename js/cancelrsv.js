@@ -6,7 +6,7 @@
 		var diffDays = Math.round((secondDate.getTime() - currentDate.getTime())/(oneDay));
 		var txt;
 
-		if(diffDays < 2){
+		if(diffDays > 2){
 			var r = confirm("Are you confirm?");
 			if (r == true) {
 				window.location.href = '../php/cancel-reservation.php?id='+b;
