@@ -29,10 +29,9 @@ include "../php/check_access_admin.php";
 			<![endif]-->
 
 
-<style>
-	
 
-</style>
+
+
 
 		</head>
 		<body class="avoid-fout">
@@ -100,7 +99,7 @@ include "../php/check_access_admin.php";
 										</li>
 									</ul>
 								</div>
-								<div class="tile-inner">
+								<div class="tile-inner" id="venues">
 
 									<select class="form-control" id="input-select" name="venue" onchange="" size="1">
 								   <option value="f01">Bilik Persatuan 1</option>
@@ -135,7 +134,10 @@ include "../php/check_access_admin.php";
 			
 			<!-- FOOTER -->
 			<?php include "../template/footer.php"; ?>
-
+			<script type="text/javascript">
+	var optionValue= "<?php echo $_GET['venue'] ?>";
+$("#input-select").val(optionValue).find("option[value=" + optionValue +"]").attr('selected', true);
+</script>
 			<!-- // <script src="../js/jquery.min.js"></script> -->
 			<script src="../js/base.min.js" type="text/javascript"></script>
 		</body>

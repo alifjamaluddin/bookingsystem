@@ -128,6 +128,10 @@ include "../php/config.php";
 			
 			<!-- FOOTER -->
 			<?php include "../template/footer.php"; ?>
+						<script type="text/javascript">
+	var optionValue= "<?php echo $_GET['venue'] ?>";
+$("#input-select").val(optionValue).find("option[value=" + optionValue +"]").attr('selected', true);
+</script>
 			<!-- // <script src="../js/jquery.min.js"></script> -->
 			<script src="../js/base.min.js" type="text/javascript"></script>
 		</body>
