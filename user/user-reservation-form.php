@@ -143,6 +143,17 @@ if (mysqli_connect_errno())
 							</div>
 						</div>
 
+						<div class="form-group">
+									<div class="row">
+										<div class="col-lg-2 col-md-3 col-sm-4">
+											<label class="form-label" for="input-text">Poster(optional)</label>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-8">
+											<input class="form-control" id="input-text" type="file" name="poster">
+										</div>
+									</div>
+								</div>
+
 
 					</fieldset>
 
@@ -161,7 +172,7 @@ if (mysqli_connect_errno())
 	</div>
 	
 	<!-- FOOTER -->
-	<?php include "template/footer.php"; ?>
+	<?php include "../template/footer.php"; ?>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/base.min.js" type="text/javascript"></script>

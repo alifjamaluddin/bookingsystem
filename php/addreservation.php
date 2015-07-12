@@ -29,10 +29,12 @@ if (isset($_POST['submit'])) {
   $datetimeto=$_POST['datetimeto']; 
   $facid=$_POST['facid']; 
   $userid=$_SESSION['userid'];
+  $poster = "";
+include "fileupload.php";
 
 
-$InsertRS__query="INSERT INTO `reservation` (`eventname`, `datetimefrom`, `datetimeto`, `userid`, `facid`) 
-VALUES ('$eventname', '$datetimefrom', '$datetimeto', '$userid', '$facid');";
+$InsertRS__query="INSERT INTO `reservation` (`eventname`, `datetimefrom`, `datetimeto`, `userid`, `facid`,`poster`) 
+VALUES ('$eventname', '$datetimefrom', '$datetimeto', '$userid', '$facid','$poster');";
 
 $InsertRS = $connection->query($InsertRS__query);
   if ($InsertRS) {

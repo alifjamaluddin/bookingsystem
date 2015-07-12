@@ -45,7 +45,7 @@ $ApproveRS = $connection->query($ApproveRS__query);
     $notel = "6".$row['notel'];
     // echo $notel;
     // echo $message;
-    gw_send_sms($notel, $message);
+    // gw_send_sms($notel, $message);
   	echo $SUCCESS;
     }
   else {

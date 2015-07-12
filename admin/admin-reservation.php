@@ -88,7 +88,7 @@ if (mysqli_connect_errno())
 							<div class="row">
 
 								<?php 
-								$View__query="SELECT r.id, r.eventname, r.datetimefrom, r.datetimeto, r.datecreated, p.name FROM reservation r, place p WHERE r.facid = p.facid AND `status` = 'Dalam proses' ORDER BY  datecreated DESC";
+								$View__query="SELECT r.id, r.eventname, r.datetimefrom, r.datetimeto, r.datecreated, r.poster, p.name FROM reservation r, place p WHERE r.facid = p.facid AND `status` = 'Dalam proses' ORDER BY  datecreated DESC";
 								$ViewRS = $connection->query($View__query);
 
 								while($row = mysqli_fetch_assoc($ViewRS)){
@@ -102,8 +102,13 @@ if (mysqli_connect_errno())
 														<small>Place : </small>' .$row['name'].' <br>
 														<small>From : </small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To : </small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
-														<small>Submit date : '.date("d/m/Y  h:i A", strtotime($row['datecreated'])).'</small>  <br><br>
-														
+														<small>Submit date : '.date("d/m/Y  h:i A", strtotime($row['datecreated'])).'</small>  <br>';
+											if($row['poster']!=""){
+												echo '<small>Poster: <a href="'.$row['poster'].'">Click here</a></small><br>';
+											}else{
+												echo '<small>Poster: No poster</small><br>';
+											}
+													echo '	
 														<a href="../php/approvereserve.php?id='.$row['id'].'" class="btn btn-green">Approve</a>
 														<a href="../php/cancelreserve.php?id='.$row['id'].'" class="btn btn-red">Cancel</a>
 													</p>
