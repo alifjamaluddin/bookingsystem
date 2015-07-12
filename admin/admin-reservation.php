@@ -7,6 +7,15 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
+$conn = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+// Check connection
+if (mysqli_connect_errno())
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$update__query = "UPDATE `reservation` SET `isread` = '1' WHERE 'isread' = 0;";
+$notiRS = $conn->query($update__query);
+
 
 $connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 // Check connection
