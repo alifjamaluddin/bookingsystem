@@ -1,5 +1,6 @@
 <?php
 require( "config.php" );
+include "../php/sendsms.php";
 
 // *** Validate request to login to this site.
 // if (!isset($_SESSION)) {
@@ -28,9 +29,31 @@ $ApproveRS__query="UPDATE `reservation` SET `status` = 'Diluluskan' WHERE `id` =
 $ApproveRS = $connection->query($ApproveRS__query);
 
   if ($ApproveRS) {
+    $Select__Query = "SELECT r.id, r.eventname, r.datetimefrom, r.datetimeto, r.datecreated, p.name, u.fullname, u.nomatrik, u.notel FROM reservation r, place p, user u WHERE r.facid = p.facid AND r.userid = u.id AND r.id = $id";
+    $SelectRS = $connection->query($Select__Query);
+    $row = mysqli_fetch_assoc($SelectRS);
+    $message = '
+    Your reservation has been approved. 
+    Details of the reservation: 
+    Reserved by: '.$row['fullname'].'
+    Event name : '.$row["eventname"].' 
+    Facility : '.$row["name"].' 
+    Start: '.date("d/m/Y  h:i A", strtotime($row["datetimefrom"])).'
+    End: '.date("d/m/Y  h:i A", strtotime($row["datetimeto"])).'
+
+    ';
+    $notel = "6".$row['notel'];
+    // echo $notel;
+    // echo $message;
+    gw_send_sms($notel, $message);
   	echo $SUCCESS;
     }
   else {
   	echo $FAILED;
   }
+
+
+
+
+
 ?>

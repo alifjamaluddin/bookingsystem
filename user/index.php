@@ -70,7 +70,7 @@ include "../php/config.php"
 			</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
 			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>

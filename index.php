@@ -45,8 +45,8 @@ echo "TEST";
 				<ul class="nav nav-list pull-right">
 					<li>
 						<a data-toggle="menu" href="#profile">
-							<span class="access-hide">Sign In</span>
-							<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+							<span>Sign In</span>
+							<!-- <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span> -->
 						</a>
 					</li>
 				</ul>

@@ -50,7 +50,7 @@ $profileRS__query="SELECT * FROM user WHERE id = $userid";
 				<div class="menu-content">
 					<ul class="nav">
 						<li>
-							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
+							<a href="form-edit-profile.php"><span class="icon icon-account-box"></span>Profile Settings</a>
 						</li>
 						<li>
 							<a href="../php/logout.php"><span class="icon icon-exit-to-app"></span>Logout</a>

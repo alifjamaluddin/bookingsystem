@@ -1,5 +1,6 @@
 <?php
 include "../php/check_access_user.php";
+include "../php/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

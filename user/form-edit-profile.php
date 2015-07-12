@@ -1,6 +1,6 @@
 <?php
 require( "../php/config.php" );
-// include "../php/check_access_admin.php";
+include "../php/check_access_user.php";
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
@@ -78,8 +78,8 @@ if (mysqli_connect_errno())
 					</li>
 				</ul>
 			</header>
-			<?php include "../template/admin-menu.php"; ?>
-			<?php include "../template/admin-profile.php"; ?>
+			<?php include "../template/user-menu.php"; ?>
+			<?php include "../template/user-profile.php"; ?>
 
 <?php
 $userid = $_SESSION['userid'];
@@ -92,14 +92,13 @@ $row = mysqli_fetch_assoc($EditRS);
 				<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<h1 class="heading">Create User</h1>
+				<h1 class="heading">Update Account</h1>
 			</div>
 		</div>
 		<div class="content-inner">
 			<div class="container">
-				<form class="form" method="post" action="../php/edituser.php">
+				<form class="form" method="post" action="../php/user_edit_profile.php">
 					<fieldset>
-						<legend class="col-lg-10 col-lg-offset-2 col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4">User</legend>
 						
 
 						<div class="form-group">
@@ -174,7 +173,7 @@ $row = mysqli_fetch_assoc($EditRS);
 									<label class="form-label" for="input-text">Phone number</label>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="notel" placeholder="Phone number" value="<?php echo $row['notel']; ?>">
+									<input class="form-control" id="input-text" type="text" name="notel" placeholder="Phone number i.e 0123456789" value="<?php echo $row['notel']; ?>">
 								</div>
 							</div>
 						</div>

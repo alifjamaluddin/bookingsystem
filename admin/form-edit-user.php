@@ -16,10 +16,6 @@ if (mysqli_connect_errno())
   }
 
 
-$id = $_GET['id'];
-$Edit__query="SELECT * FROM `user` where id = $id";
-$EditRS = $connection->query($Edit__query);
-$row = mysqli_fetch_assoc($EditRS)
 
 ?>
 
@@ -85,6 +81,13 @@ $row = mysqli_fetch_assoc($EditRS)
 			<?php include "../template/admin-menu.php"; ?>
 			<?php include "../template/admin-profile.php"; ?>
 
+<?php
+
+$id = $_GET['id'];
+$Edit__query="SELECT * FROM `user` where id = $id";
+$EditRS = $connection->query($Edit__query);
+$row = mysqli_fetch_assoc($EditRS)
+?>
 				<div class="content">
 		<div class="content-heading">
 			<div class="container">

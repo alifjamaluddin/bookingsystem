@@ -2,7 +2,24 @@
 require( "../php/config.php" );
 include "../php/check_access_admin.php";
 
+// *** Validate request to login to this site.
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+
+$connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,30 +81,37 @@ include "../php/check_access_admin.php";
 			<?php include "../template/admin-menu.php"; ?>
 			<?php include "../template/admin-profile.php"; ?>
 
+<?php
+$userid = $_SESSION['userid'];
+
+$Edit__query="SELECT * FROM `admin` where id = $userid";
+echo $Edit__query;
+$EditRS = $connection->query($Edit__query);
+$row = mysqli_fetch_assoc($EditRS);
+?>
 				<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<h1 class="heading">Create User</h1>
+				<h1 class="heading">Update Account</h1>
 			</div>
 		</div>
 		<div class="content-inner">
 			<div class="container">
-				<form class="form" method="post" action="../php/adduser.php">
+				<form class="form" method="post" action="../php/admin_edit_profile.php">
 					<fieldset>
-						<legend class="col-lg-10 col-lg-offset-2 col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4">User</legend>
 						
 
 						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
 									<label class="form-label" for="input-text">Username</label>
+
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="username" placeholder="Username">
+									<input class="form-control" id="input-text" type="text" name="username" placeholder="Username" value="<?php echo $row['username'] ?>">
 								</div>
 							</div>
 						</div>
-
 						<div class="form-group">
 							<div class="row">
 								<div class="col-lg-2 col-md-3 col-sm-4">
@@ -105,29 +129,7 @@ include "../php/check_access_admin.php";
 									<label class="form-label" for="input-text">Full name</label>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="fullname" placeholder="Full name">
-								</div>
-							</div>
-						</div>
-
-<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Matric number</label>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="nomatrik" placeholder="Matric number">
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">IC number</label>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="noic" placeholder="IC number">
+									<input class="form-control" id="input-text" type="text" name="fullname" placeholder="Full name" value= "<?php echo $row['name']; ?>">
 								</div>
 							</div>
 						</div>
@@ -138,21 +140,7 @@ include "../php/check_access_admin.php";
 									<label class="form-label" for="input-text">Email</label>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-8">
-									<input class="form-control" id="input-text" type="text" name="email" placeholder="Email">
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4">
-									<label class="form-label" for="input-text">Role</label>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-8">
-									<select class="form-control form-control-default" id="input-select" name="role">
-									<option value="student">Student</option>
-									<option value="instructor">Instructor</option>
-								</select>
+									<input class="form-control" id="input-text" type="text" name="email" placeholder="Email" value="<?php echo $row['email']; ?>">
 								</div>
 							</div>
 						</div>
@@ -164,7 +152,7 @@ include "../php/check_access_admin.php";
 					<div class="form-group-btn">
 						<div class="row">
 							<div class="col-lg-4 col-lg-push-2 col-md-6 col-md-push-3 col-sm-8 col-sm-push-4">
-								<button class="btn btn-blue waves-button waves-light waves-effect" type="submit" name="submit">Submit</button><a class="btn waves-button waves-effect" href="pengguna.php" >Cancel</a>
+								<button class="btn btn-blue waves-button waves-light waves-effect" type="submit" name="submit">Submit</button><a class="btn waves-button waves-effect" href="admin-registration.php" >Cancel</a>
 							</div>
 						</div>
 					</div>
@@ -174,7 +162,7 @@ include "../php/check_access_admin.php";
 	</div>
 			
 			<!-- FOOTER -->
-			<?php include "template/footer.php"; ?>
+			<?php include "../template/footer.php"; ?>
 
 			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>

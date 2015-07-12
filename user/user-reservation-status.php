@@ -29,6 +29,8 @@ if (mysqli_connect_errno())
 	<!-- css -->
 	<link href="../css/base.min.css" rel="stylesheet">
 	<link href="../css/custom.css" rel="stylesheet">
+<script src="../js/cancelrsv.js" type="text/javascript"></script>
+
 
 	<!-- favicon -->
 	<!-- ... -->
@@ -107,7 +109,8 @@ if (mysqli_connect_errno())
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
 														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>';
 														if($row['status']=="Diluluskan"){
-															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green" target="_blank">Print Slip</a>';															
+															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green" target="_blank">Print Slip</a>  ';															
+															echo '<a onclick="cancel('.strtotime($row['datetimefrom']).','.$row['id'].')" class="btn btn-red" target="_blank">Cancel</a>';															
 														}
 
 														echo '
@@ -134,5 +137,6 @@ if (mysqli_connect_errno())
 
 			<script src="../js/jquery.min.js"></script>
 			<script src="../js/base.min.js" type="text/javascript"></script>
+			
 		</body>
 		</html>
