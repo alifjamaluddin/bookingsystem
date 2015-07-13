@@ -1,7 +1,7 @@
 <?php
 ini_set( "display_errors", false );
 date_default_timezone_set( "Asia/Kuala_Lumpur" );  
-define( "DB_HOST", "localhost" );//PUT YOUR LOCALHOST/REMOTE ADDRESS
+define( "DB_HOST", "localhost:8889" );//PUT YOUR LOCALHOST/REMOTE ADDRESS
 define( "DB_USERNAME", "root" );//PUT YOUR DB USERNAME
 define( "DB_PASSWORD", "root" );//PUT YOUR DB PASSOWRD
 define( "DB_NAME", "bookingsys" );//PUT YOUR DATABASE NAME

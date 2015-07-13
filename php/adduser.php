@@ -9,6 +9,7 @@ if (!isset($_SESSION)) {
 
 $SUCCESS = "<script>alert('User registration success');window.location='../admin/admin-registration.php';</script>";
 $FAILED = "<script>alert('User registration fail');window.history.back();</script>";
+$REQUIRED = "<script>alert('Please fill all required fields');window.history.back();</script>";
 
 // if(!isset($_SESSION['USER_ID']) && empty($_SESSION['USER_ID'])) {
 // 	header("Location: " . $REDIRECT_LOGIN );
@@ -24,25 +25,33 @@ if (mysqli_connect_errno())
   
 
 if (isset($_POST['submit'])) {
-  $username=$_POST['username']; 
-  $password=$_POST['password']; 
+ 
+
+if($_POST['nomatrik']!="" && $_POST['noic']!="" && $_POST['fullname']!="" && $_POST['email']!=""){
+   $username=$_POST['nomatrik']; 
+  $password=$_POST['noic']; 
   $nomatrik=$_POST['nomatrik']; 
   $noic=$_POST['noic']; 
   $fullname=$_POST['fullname']; 
   $email=$_POST['email']; 
-  $confirmation = generateRandomString(20);
+  $notel= ""; //$_POST['notel']; 
+  $role =$_POST['role'];
+  // $confirmation = generateRandomString(20);
 
-
-$InsertRS__query="INSERT INTO `user` (`username`, `password`, `fullname`, `email`, `noic`, `nomatrik`, `confirmation`, `status`, `role`) 
-VALUES ('$username', MD5('$password'), '$fullname', '$email', '$noic', '$nomatrik', '$confirmation', '0', '$role')";
-
+  $InsertRS__query="INSERT INTO `user` (`username`, `password`, `fullname`, `email`, `noic`, `nomatrik`, `role`,`notel`) 
+VALUES ('$username', MD5('$password'), '$fullname', '$email', '$noic', '$nomatrik', '$role','$notel')";
 $InsertRS = $connection->query($InsertRS__query);
   if ($InsertRS) {
-  	echo $SUCCESS;
+    echo $SUCCESS;
     }
   else {
-  	echo $FAILED;
+    echo $FAILED;
   }
+}else{
+  echo $REQUIRED;
+}
+
+
 }
 
 ?>

@@ -30,7 +30,11 @@ if (isset($_POST['submit'])) {
   $facid=$_POST['facid']; 
   $userid=$_SESSION['userid'];
   $poster = "";
-include "fileupload.php";
+if(isset($_FILES['poster']) && $_FILES['poster']['size'] > 0){
+  include "fileupload.php";
+}else{
+  $poster = "";
+}
 
 
 $InsertRS__query="INSERT INTO `reservation` (`eventname`, `datetimefrom`, `datetimeto`, `userid`, `facid`,`poster`) 

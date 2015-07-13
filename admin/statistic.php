@@ -22,7 +22,7 @@ include "../php/check_access_admin.php";
 
                 var chart = new CanvasJS.Chart("chartContainer", {
                     title:{
-        text: "Venue Reservation for "+monthNames[month]+", 2015"    
+        text: "The Statistic Facilities Usage for "+monthNames[month-1]+", 2015"    
       },
       animationEnabled: true,
       axisY: {
@@ -63,9 +63,11 @@ include "../php/check_access_admin.php";
    
 </head>
 <body>
-    <button onclick="window.print()">Print this report</button>
 
 
     <div id="chartContainer" style="width: 800px; height: 380px;"></div>
+    <button onclick="window.print()">Print this report</button>
+    <button onclick="window.history.back()">Back</button>
+
 </body>
 </html>

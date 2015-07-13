@@ -49,7 +49,7 @@
 								<div class="card-main">
 									<div class="card-header">
 										<div class="card-inner">
-											<h1 class="card-heading">Login</h1>
+											<h1 class="card-heading">Admin Login</h1>
 										</div>
 									</div>
 									<div class="card-inner">
@@ -94,11 +94,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="footer">
-		<div class="container">
-			<p>Material</p>
-		</div>
-	</footer>
+	<?php include "../template/footer.php"; ?>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/base.min.js" type="text/javascript"></script>

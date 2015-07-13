@@ -37,15 +37,20 @@ $row = mysqli_fetch_assoc($ViewRS);
 		}
 
 		.detail-inner{
-			text-align: center;
+			padding-left: 25%;
+			text-align: left;
 			width: 50%;
-			 margin: 0 auto;
+			margin: 0 auto;
 		}
 
 		.printbtn{
 			text-align: center;
 			width: 50%;
 			 margin: 0 auto;
+		}
+
+		.logo{
+			text-align: center;
 		}
 	</style>
 	<script type="text/javascript" src="../js/print.js"></script>
@@ -54,8 +59,10 @@ $row = mysqli_fetch_assoc($ViewRS);
 	<div class="container">
 		<div class="detail" >
 		<div class="slip-content" id="printable">
-			<div class="detail-inner" >
+			<div class="logo">
 			<img id="header" src="../images/uitm_logo.jpg">
+</div>
+			<div class="detail-inner" >
 				<h1>Reservation Slip</h1>
 				<p>Reference Id : <?php echo $row['id'] ?></p>
 				<p>Full name: <?php echo ucwords($row['fullname']) ?></p>

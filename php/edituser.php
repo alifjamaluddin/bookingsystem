@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 
 $SUCCESS = "<script>alert('User updated');window.location='../admin/admin-registration.php';</script>";
 $FAILED = "<script>alert('User update failed');window.history.back();</script>";
+$REQUIRED = "<script>alert('Please fill all required fields');window.history.back();</script>";
 
 
 // if(!isset($_SESSION['USER_ID']) && empty($_SESSION['USER_ID'])) {
@@ -25,13 +26,15 @@ if (mysqli_connect_errno())
 
 if (isset($_POST['submit'])) {
 
+if($_POST['nomatrik']!="" && $_POST['noic']!="" && $_POST['fullname']!="" && $_POST['email']!=""){
  $nomatrik=$_POST['nomatrik']; 
-  $password=$_POST['password']; 
+  $password=$_POST['noic']; 
   $fullname=$_POST['fullname']; 
-  $username=$_POST['username']; 
+  $username=$_POST['nomatrik']; 
   $email=$_POST['email']; 
   $noic=$_POST['noic']; 
   $role=$_POST['role']; 
+  // $notel=$_POST['notel']; 
   $id=$_POST['id'];
 
 
@@ -45,6 +48,9 @@ $InsertRS = $connection->query($InsertRS__query);
     // echo $FAILED;
   	echo $InsertRS__query;
   }
+}else{
+  echo $REQUIRED;
+}
 }
 
 

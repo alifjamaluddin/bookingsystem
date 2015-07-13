@@ -108,6 +108,7 @@ if (mysqli_connect_errno())
 												<div class="card-inner">
 												<p class="card-heading text-alt">'.$row['eventname'].'</p>
 													<p>
+													<small>Ref. id: '.$row['id'].'</small><br>
 														<small>Place : </small>' .$row['name'].' <br>
 														<small>From : </small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To : </small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>

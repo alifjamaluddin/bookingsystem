@@ -115,6 +115,7 @@ if (mysqli_connect_errno())
 							<div class="tile-sub">
 								<p>
 														<small>Reserved by : </small> '.$row['fullname'].' <br>
+														<small>Ref. id: '.$row['id'].'</small><br>
 															<small>Matric number : </small> '.strtoupper($row['nomatrik']).' <br>
 														<small>Place : </small>' .$row['name'].' <br>
 														<small>From : </small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>

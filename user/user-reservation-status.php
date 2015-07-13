@@ -103,17 +103,19 @@ if (mysqli_connect_errno())
 												<div class="card-inner">
 													<p class="card-heading text-alt">'.$row['eventname'].'</p>
 													<p>
+														<small>Ref. id: '.$row['id'].'</small><br>
 														<small>From :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimefrom'])).'<br>
 														<small>To :</small> '.date("d/m/Y  h:i A", strtotime($row['datetimeto'])).' <br>
 														<small>Status : </small><span class="text-yellow">'.$row['status'].'</span> <br>';
 														if($row['poster']!=""){
-															echo '<small>Poster: <a href="'.$row['poster'].'">Click here</a></small><br>';
+															echo '<small>Poster: <a href="'.$row['poster'].'" target="_blank">Click here</a></small><br>';
 														}else{
 															echo '<small>Poster: No poster</small><br>';
 														}
+															echo '<a onclick="cancel('.strtotime($row['datecreated']).','.$row['id'].')" class="btn btn-red" target="_blank">Cancel</a>';															
+
 														if($row['status']=="Diluluskan"){
 															echo '<a href="./slip.php?id='.$row['id'].'" class="btn btn-green" target="_blank">Print Slip</a>  ';															
-															echo '<a onclick="cancel('.strtotime($row['datetimefrom']).','.$row['id'].')" class="btn btn-red" target="_blank">Cancel</a>';															
 														}
 
 														echo '
