@@ -25,8 +25,7 @@
 						<div class="card-inner">
 							<p class="card-heading text-alt">News 2</p>
 							<p>
-								Lorem ipsum dolor sit amet.<br>
-								Consectetur adipiscing elit.
+								Majlis Perwakilan Pelajar UiTM Melaka Kampus Jasin bakal memperkenalkan baju rasmi UiTM Melaka Kampus Jasin pada
 							</p>
 						</div>
 
@@ -41,8 +40,7 @@
 						<div class="card-inner">
 							<p class="card-heading text-alt">News 3</p>
 							<p>
-								Lorem ipsum dolor sit amet.<br>
-								Consectetur adipiscing elit.
+								Ada sesiapa yang ingin join event Fit Malaysia di Johor pada 30 Mei 2015 tetapi tiada kenderaan?  Kami akan sediakan bas untuk warga
 							</p>
 						</div>
 
@@ -58,8 +56,7 @@
 						<div class="card-inner">
 							<p class="card-heading text-alt">News 4</p>
 							<p>
-								Lorem ipsum dolor sit amet.<br>
-								Consectetur adipiscing elit.
+								Pertandingan Bola Tampar berlangsungnya selama 2 hari. Alhamdulillah semua berjalan dengan lancar. 
 							</p>
 						</div>
 
@@ -100,9 +97,9 @@
 </p><br>
 <img src="images/news2.png" style="max-width:400px">
 				</div>
-				<div class="modal-footer">
+				<!-- <div class="modal-footer">
 					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -115,17 +112,11 @@
 					<h2 class="modal-title">News 3</h2>
 				</div>
 				<div class="modal-inner">
-					<p><strong>Overflowing text to show scroll behaviour</strong></p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
+					<p>Ada sesiapa yang ingin join event Fit Malaysia di Johor pada 30 Mei 2015 tetapi tiada kenderaan?  Kami akan sediakan bas untuk warga UiTM Jasin tetapi kami akan melihat berapa ramai yang memerlukan bas ke sana. Sila beritahu kami melalui komen mahupun personal masej di page ini selewat-lewatnya Jumaat (15 Mei 2015). Daftarkan diri anda  <a href="https://www.fit.my/content/events/johor_20150530/12870 ">di sini</a>  untuk join Fit Malaysia 
+Sebarang pertanyaan boleh menghubungi Hamizah-0172076944 atau Nurfatien-0102779721
+</p>
+<img src="images/news3.png" style="max-width:400px">
+	</div>
 				<div class="modal-footer">
 					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
 				</div>
@@ -141,20 +132,12 @@
 					<h2 class="modal-title">News 4</h2>
 				</div>
 				<div class="modal-inner">
-					<p><strong>Overflowing text to show scroll behaviour</strong></p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
-				<div class="modal-footer">
+					<p>Pertandingan Bola Tampar berlangsungnya selama 2 hari. Alhamdulillah semua berjalan dengan lancar. Terima kasih kepada semua yang terlibat secara langsung mahupun tidak langsung untuk menjayakan pertandingan ini. Tarikh : 28 - 29 Mac 2014 Tempat : Gelanggang Bola Tampar, UiTM Jasin
+Majulah Sukan untuk Negara.  UiTM Dihatiku.</p>
+					</div>
+				<!-- <div class="modal-footer">
 					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
