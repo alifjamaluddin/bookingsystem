@@ -117,9 +117,9 @@ Sebarang pertanyaan boleh menghubungi Hamizah-0172076944 atau Nurfatien-01027797
 </p>
 <img src="images/news3.png" style="max-width:400px">
 	</div>
-				<div class="modal-footer">
+				<!-- <div class="modal-footer">
 					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
